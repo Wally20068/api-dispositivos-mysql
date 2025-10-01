@@ -1,0 +1,41 @@
+﻿{
+  "info": {
+    "name": "API Dispositivos (MySQL) - UCACUE",
+    "_postman_id": "c90c5af7-aaaa-bbbb-cccc-123456789000",
+    "description": "Pruebas CRUD: creación, lectura, actualización y eliminación sobre /api/dispositivos",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [{ "key": "base_url", "value": "http://localhost:3000" }],
+  "item": [
+    {
+      "name": "Crear dispositivo",
+      "request": {
+        "method": "POST",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "url": "{{base_url}}/api/dispositivos",
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"hostname\": \"SW-Ucacue-A\",\n  \"ip_address\": \"192.168.10.2\",\n  \"tipo\": \"switch\",\n  \"ubicacion\": \"Sala Telecom - Rack B\",\n  \"modelo\": \"Catalyst 2960\",\n  \"fabricante\": \"Cisco\",\n  \"serie\": \"FOC987XYZ\",\n  \"estado\": \"activo\",\n  \"vlan_id\": 20\n}"
+        }
+      }
+    },
+    {
+      "name": "Listar dispositivos",
+      "request": { "method": "GET", "url": "{{base_url}}/api/dispositivos" }
+    },
+    {
+      "name": "Obtener por id",
+      "request": { "method": "GET", "url": "{{base_url}}/api/dispositivos/1" }
+    },
+    {
+      "name": "Actualizar (PUT) id=1",
+      "request": {
+        "method": "PUT",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "url": "{{base_url}}/api/dispositivos/1",
+        "body": { "mode": "raw", "raw": "{\n  \"ubicacion\": \"Laboratorio ICCIT - Rack C\",\n  \"estado\": \"mantenimiento\"\n}" }
+      }
+    },
+    { "name": "Eliminar id=1", "request": { "method": "DELETE", "url": "{{base_url}}/api/dispositivos/1" } }
+  ]
+}
