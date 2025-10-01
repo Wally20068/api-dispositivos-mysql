@@ -2,7 +2,7 @@ API Dispositivos (MySQL) – Trabajo Final Redes UCACUE
 
 API REST en Node.js + Express con persistencia real en MySQL para gestionar un inventario de dispositivos de red (routers, switches, APs, etc.).
 
-🧰 Tech stack
+Tech stack
 
 Node.js + Express
 
@@ -11,24 +11,6 @@ MySQL 8 (administrado con MySQL Workbench)
 mysql2, express-validator, dotenv, cors, morgan
 
 Postman (colección incluida)
-
-📂 Estructura del proyecto
-api-dispositivos-mysql/
-├─ sql/
-│  └─ 01-init.sql
-├─ src/
-│  ├─ index.js
-│  ├─ db.js
-│  ├─ routes/
-│  │  └─ dispositivos.routes.js
-│  └─ controllers/
-│     └─ dispositivos.controller.js
-├─ postman_collection.json
-├─ capturas/                 (agrega aquí tus screenshots)
-├─ .env                      (NO subir)
-├─ .env.example
-├─ .gitignore
-└─ README.md
 
 ✅ Requisitos
 
@@ -169,7 +151,6 @@ PUT /api/dispositivos/:id → 200 OK
 
 DELETE /api/dispositivos/:id → 204 No Content
 
-(Opcional) POST con misma IP o hostname → 409 Conflict
 
 Verificación directa en MySQL (Workbench)
 USE tarea_api;
@@ -178,5 +159,6 @@ FROM dispositivos
 ORDER BY id DESC;
 
 SHOW INDEX FROM dispositivos;
+
 
 
