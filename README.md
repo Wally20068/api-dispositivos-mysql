@@ -1,4 +1,4 @@
-API Dispositivos (MySQL) – Trabajo Final Redes UCACUE
+Conexión de un API REST a una Base de Datos
 
 API REST en Node.js + Express con persistencia real en MySQL para gestionar un inventario de dispositivos de red (routers, switches, APs, etc.).
 
@@ -159,6 +159,7 @@ FROM dispositivos
 ORDER BY id DESC;
 
 SHOW INDEX FROM dispositivos;
+
 
 
 
